@@ -130,10 +130,6 @@ def ingest_data():
             # Unir las palabras ya obtenidas con las de la línea actual
             palabras = ' '.join([palabras, palabras_linea])
 
-    # Agregar último registro
-    registro = [cluster, cantidad, porcentaje, palabras]
-    df.loc[len(df)] = registro
-
     # Cerrar lectura del archivo
     archivo.close()
 
